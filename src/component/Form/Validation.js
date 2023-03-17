@@ -18,7 +18,7 @@ function Validation(form, errors, setErrors) {
     else if (form.username.length > longitudMaxima) {
         setErrors({ ...errors, username: "El nombre de usuario no puede tener más de 35 caracteres" })
         } else {
-        setErrors({ ...errors, username: "" })
+            setErrors({ ...errors, username: "" })
                 }
 
 
