@@ -10,7 +10,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
+    -webkit-animation: App-logo-spin infinite 20s linear;
+}
 }
 
 .App-header {
@@ -32,7 +33,17 @@
   from {
     transform: rotate(0deg);
   }
-  to {
+  to {  
     transform: rotate(360deg);
   }
+}
+
+
+.Nav{
+  display: flex;
+  justify-content: end;
+  background-color: blue;
+  width: 100%;
+  padding-top: 10px;
+  height: 36px;
 }
