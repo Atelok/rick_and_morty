@@ -1,18 +1,25 @@
 import React from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import {Link} from "react-router-dom"
+import style from "./Nav.module.css"
 
 const Nav = (props) => {
     return (
-        <div>
-        <Link to="/about">About</Link>
-        <Link to="/home">Home</Link>
+        <div className={style.nav_container}>
         
-        <div>
-            <SearchBar onSearch={props.onSearch}/>
-        </div>
+            <div className={style.nav_links}>
+            <Link to="/about">About</Link>
+            <Link to="/home">Home</Link>
+            </div>
 
-        <div name="logout">logout</div>
+            <div className={style.nav_search}>
+            <SearchBar onSearch={props.onSearch}/>
+            </div>
+
+            <div className={style.nav_links}>
+            <div name="logout">logout</div> 
+            </div>
+        
         </div>
     )
 }

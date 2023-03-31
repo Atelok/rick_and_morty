@@ -1,0 +1,55 @@
+/*ESTE ES EL DIV QUE CONTIENE TODO EL FORM*/
+.bodyForm{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/*-----------*/
+
+/*   */
+.contieneForm{
+    /* background-color: aqua;  */
+   /* display: inline-block;
+   align-self: center; */
+   text-align: center;
+   margin: 0 auto;
+   width: 80%;
+}
+/*-----------*/
+
+/*ESTE ES EL FORM LO QUE SE VERA */
+.formulario{ 
+    display: inline-block;
+    background-color: aliceblue;
+    border: 5px dotted fuchsia;
+    padding: 20px;
+    text-align: left;
+}
+/*-----------*/
+
+.contImg{
+    width: 110px;
+    height: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./rickColgandose.png");
+}
+
+/* Estilos para los label */
+.lalabel{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/*Estilos para el input*/
+.inpinput {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+  }

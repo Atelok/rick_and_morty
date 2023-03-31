@@ -1,17 +1,28 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import "./Card.module.css"
+import {NavLink} from "react-router-dom"
+import style from "./Card.module.css"
 
 const Card = ({name, species, gender, image,  onClose, id}) => {
   return (
-    <div className='contCard'>
-        <button onClick={()=>onClose(id)}>X</button>
-        <Link to={ `/detail/${id}`}>
-        <h2>{name}</h2>
-        </Link>
+
+    <div className={style.contCard}>
+
+        <button className={style.button} onClick={()=>onClose(id)}></button>
+      
+        <div className={style.hdos}>
         <h2>{species}</h2>
         <h2>{gender}</h2>
-        <img src={image} alt={name}/>
+        </div>
+
+        <NavLink className={style.link_style} to={ `/detail/${id}`}>
+        <h2 className={style.name}>{name}</h2>
+        </NavLink>
+
+        <div className={style.conImg}>
+        <NavLink className={style.redondex} to={ `/detail/${id}`}>
+        <img className={style.image} src={image} alt={name}/>
+        </NavLink>
+        </div>
 
     </div>
   )

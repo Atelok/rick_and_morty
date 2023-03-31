@@ -1,4 +1,165 @@
-
-.contCard{
-    background-color: black;
+html,
+body{
+  background-image: url("../../../rickmort/r&M2.png");
+  background-size: auto;
+  background-attachment: fixed;
+  /* background-repeat: no-repeat;*/
+  height: 100%;
+  min-height: 100vh; 
+  
 }
+
+/*  Este es el DIV general */
+.contCard {
+    min-width: 180px;
+    max-width: 370px;
+    min-height: 510px;
+    max-height: 510px;
+  background-image: url("../../../rickmort/circuloR&M1.png");
+  background-size: auto;
+  background-position: 47% 30%;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  border-radius: 10px 50px 10px 50px;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  
+}
+.contCard h2{
+  margin: 0px;
+}
+/*-------------------------------*/
+
+
+/* AQUI VA LOS H2 DE SPECIES Y GENDER */
+.hdos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 90%;
+  height: 15%;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: "Cofeehealing1";
+  font-size: 24.4px;
+  
+
+  -webkit-text-stroke: #95d95b 0.01px;
+  /* sombra a un texto */
+  text-shadow: 2px 2px 2px #ffffff;
+  /*----------------*/
+
+}
+
+/*-------------------------------------*/
+
+
+
+/* NOMBRE DE PERSONAJES */
+.name{
+  text-align: center;
+  padding: 30px;
+  font-weight: lighter;
+  color: antiquewhite;
+  font-family: "Cofeehealing2";
+  text-transform: uppercase;
+  text-decoration: none;
+
+  
+    /*esto es para degradado*/
+    background: linear-gradient(to right, #a8cc38,#04b0c7 );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /*---------------------*/
+
+    /* para darle contorno*/
+    -webkit-text-stroke: 1px #ffffff;
+    /*------------------*/
+
+  white-space: nowrap; /* evita que el texto se envuelva a otra línea */
+  overflow: hidden; /* oculta cualquier texto que se desborde del elemento */
+  text-overflow: ellipsis; /* agrega puntos suspensivos al final del texto que se desborda */
+  font-size: 2.1em; /* establece el tamaño de fuente en 1em */
+}
+.link_style{
+  text-decoration: none; 
+  text-align: center;
+}
+/*----------------------------*/
+
+/* contenedor DIV de la Imagen */
+.conImg {
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGEN */
+.image {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 85%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 2px 4px rgba(149, 218, 92, 0.3);
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+}
+.image:hover {
+  filter: none;
+  -webkit-filter: none;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  box-shadow: 2px 2px 8px rgba(149, 218, 92, 1.5);
+}
+/*----------------------------------*/
+
+
+/* BOTON DE ELIMINAR PERSONAJE  */
+.button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border-radius: 0px 50px 0px 0px;
+  width: 45px;
+  height: 45px;
+  background-image: url("../../../rickmort/boton.png");
+  display: flex;
+  justify-content: center;  
+  background-size: 30px;
+  background-position: center center;
+  background-color: #ffffff;
+  border: none;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0px 50px 0px 0px;
+  -moz-border-radius: 0px 50px 0px 0px;
+  -ms-border-radius: 0px 50px 0px 0px;
+  -o-border-radius: 0px 50px 0px 0px;
+}
+.button:hover {
+  background-image: url("../../../rickmort/boton.gif");
+  background-size: 38px;
+  background-position: center center;
+}
+/*----------------------------------*/

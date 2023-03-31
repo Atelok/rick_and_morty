@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Validation from "./Validation";
-
+import style from "./Form.module.css"
 
 const Form = ({login}) => {
     
@@ -30,12 +30,15 @@ const Form = ({login}) => {
     }
 
     return(
-    <>
-        <form action="" onSubmit={handleSubmit}>
+        <div className={style.bodyForm}>
+    <div className={style.contieneForm}>
+        <form className={style.formulario} action="" onSubmit={handleSubmit}>
 
-            <label htmlFor="username" >Email: </label>
 
+            <div>
+            <label className={style.lalabel} htmlFor="username" >Email: </label>
             <input 
+            className={style.inpinput}
             name="username" 
             type="text" 
             value={userData.username} 
@@ -43,24 +46,41 @@ const Form = ({login}) => {
             placeholder="Ingresa tu Email aqui..."/>
 
             <span>{errors.username}</span>
+            </div>
+
+
+            {/* AQUI ES EL RICK QUE CUELGA */}
+            <p>
+            <div className={style.contImg}>
+            {/* <img src="./rickColgandose.png" alt="Imagen sin fondo" />  */}
+            </div>
+            </p>
+            {/* --------------- */}
 
             <br />
+            
 
-            <label htmlFor="password">Password: </label>
+            <div>
+            <label className={style.lalabel} htmlFor="password">Password: </label>
 
             <input 
+            className={style.inpinput}
             name="password" 
             type="text" 
             value={userData.password} 
             onChange={handleInputChange} />
 
             <span>{errors.password}</span>
+            </div>
+            
             <br />
 
             <button>Ingresar {">"} </button>
 
         </form>
-    </>)
+        </div>
+    </div>  
+    )
 };
 
 export default Form;

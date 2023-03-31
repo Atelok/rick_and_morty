@@ -1,10 +1,11 @@
 import React from 'react'
 import Card from '../Card/Card'
+import style from "./Cards.module.css"
 
 const Cards = (props) => {
   const {characters, onClose} = props
     return (
-    <div style={{display:"flex"}}>
+    <div className={style.contenedor}>
         {characters.map((character,index)=>{
             return (
             <Card  

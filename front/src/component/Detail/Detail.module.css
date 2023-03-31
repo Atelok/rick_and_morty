@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "selenaBrush";
+    src: url("../../../fuentes/SellenaBrush-x3JyK.ttf");
+}
+@font-face {
+    font-family: "futuraBold";
+    src: url("../../../fuentes/futura-bold.ttf");
+}
+@font-face {
+    font-family: "Univere67";
+    src: url("../../../fuentes/univers-67-condensed-bold.otf");
+}
+@font-face {
+    font-family: "Cofeehealing1";
+    src: url("../../../fuentes/CoffeeHealing-1GrKe.ttf");
+}
+@font-face {
+    font-family: "Cofeehealing2";
+    src: url("../../../fuentes/CoffeeHealingItalic-RpP6o.ttf")
+}
+@font-face {
+    font-family: "getschwifty";
+    src: url("../../../fuentes/getschwifty.ttf");
+}
+
+/* ESTE ES EL CONTENEDOR DIV MAYOR */
+.contenedor{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+/*-----------*/
+
+.contenedorDetail{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10%;
+    background-color: antiquewhite;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    box-shadow: 0 0 20px 0 #75bf21 inset, 0 0 20px 4px #75bf21;
+    
+}
+.contenedorDetail h3{
+    
+    display: inline-block;
+    /* display: flex; */
+    font-family: "Cofeehealing2";
+    margin-right: 15px;  
+    margin-left: 5px;
+}
+.contenedorDetail p{
+
+    display: inline-block;
+    font-family: "getschwifty";
+    text-shadow: 1px 1px 1px rgba(167, 212, 42, 0.5),
+             -1px -1px 1px rgba(167, 212, 42, 0.5);
+    -webkit-text-stroke: 1px #00333d;
+    color: #00b5cc;
+    font-size: 20px;
+}
+
+
+.contenedorDetail img{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+
+}
+
+.recordandoaPedro{
+    align-content: center;
+}
+
+/* BOTON DE REGRESAR*/
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'getschwifty', sans-serif;
+    font-weight: 700;
+    
+}
+.third {
+    font-family: "getschwifty", sans-serif;
+    font-size: x-large;
+    border-color: #304166;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #304166 inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+.third:hover {
+    box-shadow: 0 0 10px 0 #786237 inset, 0 0 10px 4px #786237;
+  }
+
+/*-------------------------------------------*/
+/* .nuevaCreacion{
+    margin-top: 20px;
+    width: 200px;
+  height: 200px;
+  background-color: red;
+  clip-path: ellipse(50% at 50% 40% ) ;
+
+} */

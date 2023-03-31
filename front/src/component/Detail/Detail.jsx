@@ -1,43 +1,75 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import React from 'react'
+import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import style from "./Detail.module.css";
 
 const Detail = () => {
-    const {detailId} = useParams();
-    const [character, setCharacter] = useState({}); 
+  const { detailId } = useParams();
+  const [character, setCharacter] = useState({});
+  const myButon = (style.btn, style.third);
 
-    useEffect(() => {
-      fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
-        .then((response) => response.json())
-        .then((char) => {
-          if (char.name) {
-            setCharacter(char);
-          } else {
-            window.alert("No hay personajes con ese ID");
-          }
-        })
-        .catch((err) => {
+  useEffect(() => {
+    fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+      .then((response) => response.json())
+      .then((char) => {
+        if (char.name) {
+          setCharacter(char);
+        } else {
           window.alert("No hay personajes con ese ID");
-        });
-      return setCharacter({});
-    }, [detailId]);
+        }
+      })
+      .catch((err) => {
+        window.alert("No hay personajes con ese ID");
+      });
+    return setCharacter({});
+  }, [detailId]);
 
   return (
-    <div>
-        <h3>Nombre: {character.name}</h3>
-        <h3>Estado: {character.status}</h3>
-        <h3>Especie: {character.species}</h3>
-        <h3>Genero: {character.gender}</h3>
-        <h3>Origen: {character.origin?.name}</h3>
-        <img src={character.image} alt={character.name} />
-        <Link to="/home">
-          <button>Regresar</button>
-          </Link> 
-      
-    </div>
-  )
-}
+    <div className={style.contenedor}>
+      {character.name? 
+      (<div>
+        <div className={style.contenedorDetail}>
+          <div>
+            <h3>Nombre: </h3>
+            <p>{character.name}</p>
+          </div>
 
-export default Detail
+          <div>
+            <h3>Estado: </h3>
+            <p>{character.status}</p>
+          </div>
+
+          <div>
+            <h3>Especie: </h3>
+            <p>{character.species}</p>
+          </div>
+
+          <div>
+            <h3>Genero: </h3>
+            <p>{character.gender}</p>
+          </div>
+
+          <div>
+            <h3>Origen: </h3>
+            <p>{character.origin?.name}</p>
+          </div>
+
+          <img src={character.image} alt={character.name} />
+        </div>
+        <div className={style.recordandoaPedro}>
+        <Link to="/home">
+          <button className={myButon}>
+            <span className={style.texto}>Regresar</span>
+          </button>
+        </Link>
+        </div>
+      </div>)
+      :(<h3>No molestar</h3>)
+      }
+    </div>
+  );
+};
+
+export default Detail;

@@ -1,0 +1,9 @@
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2%; /*opcional*/
+    /* height: 500px; */
+    grid-row-gap: 37px;
+    grid-column-gap: 1px
+  }
