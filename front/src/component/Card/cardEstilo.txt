@@ -1,0 +1,187 @@
+/* Estilos para el cuerpo de la página */
+body {
+  background-image: url("../../../rickmort/r&M2.png");
+  background-size: auto;
+  background-attachment: fixed;
+  height: 100%;
+  min-height: 100vh;
+  }
+  
+  /* Contenedor general */
+  .contCard {
+  position: relative;
+  height: 100%;
+  min-width: 180px;
+  max-width: 370px;
+  min-height: 510px;
+  max-height: 510px;
+  border: 2px solid black;
+  border-radius: 10px 50px 10px 50px;
+  background-image: url("../../../rickmort/circuloR&M1.png");
+  background-size: auto;
+  background-position: 47% 30%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  }
+  
+  /* Título de la página */
+  .contCard h2 {
+  margin: 0;
+  }
+  
+  /* Contenedor de los H2 de Species y Gender */
+  .hdos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  height: 15%;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: "Cofeehealing1";
+  font-size: 24.4px;
+  -webkit-text-stroke: #95d95b 0.01px;
+  text-shadow: 2px 2px 2px #ffffff;
+  }
+  
+  /* Nombre del personaje */
+  .name {
+  text-align: center;
+  padding: 30px;
+  font-weight: lighter;
+  color: antiquewhite;
+  font-family: "Cofeehealing2";
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(to right, #a8cc38,#04b0c7 );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2.1em;
+  }
+  
+  /* Estilo del enlace */
+  .link_style {
+  text-decoration: none;
+  text-align: center;
+  }
+  
+  /* Contenedor de la imagen */
+  .conImg {
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* Estilos de la imagen */
+  .image {
+  margin: auto;
+  width: 85%;
+  height: auto;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 2px 4px rgba(149, 218, 92, 0.3);
+  }
+  
+  .image:hover {
+  filter: none;
+  transform: scale(1.2);
+  box-shadow: 2px 2px 8px rgba(149, 218, 92, 1.5);
+  }
+  
+  /* BOTON DE ELIMINAR PERSONAJE*/
+.button {
+position: absolute;
+top: 2px;
+right: 2px;
+border-radius: 0px 50px 0px 0px;
+width: 45px;
+height: 45px;
+background-image: url("../../../rickmort/boton.png");
+display: flex;
+justify-content: center;
+background-size: 30px;
+background-position: center center;
+background-color: #ffffff;
+border: none;
+background-repeat: no-repeat;
+-webkit-border-radius: 0px 50px 0px 0px;
+-moz-border-radius: 0px 50px 0px 0px;
+-ms-border-radius: 0px 50px 0px 0px;
+-o-border-radius: 0px 50px 0px 0px;
+transition: transform 0.2s ease-in-out;
+-webkit-transition: transform 0.2s ease-in-out;
+-moz-transition: transform 0.2s ease-in-out;
+-ms-transition: transform 0.2s ease-in-out;
+-o-transition: transform 0.2s ease-in-out;
+outline: none;
+cursor: pointer;
+}
+.button:hover {
+transform: scale(1.2);
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-ms-transform: scale(1.2);
+-o-transform: scale(1.2);
+box-shadow: 2px 2px 8px rgba(149, 218, 92, 1.5);
+}
+/*----------------------------------*/
+
+/* DESCRIPCION DE PERSONAJES */
+.contInfo {
+margin: 20px;
+margin-top: 45%;
+font-family: "Cofeehealing1";
+font-size: 18.5px;
+text-align: justify;
+color: #ffffff;
+font-weight: bold;
+overflow: hidden;
+height: 70px;
+}
+/*----------------------------*/
+
+/* HOVER PARA DESCRIPCION */
+.contCard:hover .contInfo {
+margin-top: 25%;
+height: 100%;
+transition: margin-top 0.2s, height 0.2s;
+-webkit-transition: margin-top 0.2s, height 0.2s;
+-moz-transition: margin-top 0.2s, height 0.2s;
+-ms-transition: margin-top 0.2s, height 0.2s;
+-o-transition: margin-top 0.2s, height 0.2s;
+}
+/*------------------------*/
+
+/* HOVER PARA IMAGEN */
+.contCard:hover .image {
+transform: scale(1.15);
+-webkit-transform: scale(1.15);
+-moz-transform: scale(1.15);
+-ms-transform: scale(1.15);
+-o-transform: scale(1.15);
+transition: transform 0.2s ease-in-out;
+-webkit-transition: transform 0.2s ease-in-out;
+-moz-transition: transform 0.2s ease-in-out;
+-ms-transition: transform 0.2s ease-in-out;
+-o-transition: transform 0.2s ease-in-out;
+}
+/*------------------------*/
+
+/* MEDIA QUERIES /
+@media only screen and (max-width: 800px) {
+/ contenedor general */
+.contCard {
+  min-width:800}}

@@ -11,13 +11,14 @@ const getCharDetail = (req, res) => {
   axios
   .get(`${URL}${id}`)
   .then((resp) => {
-      const {id, name, species, image, gender,origin} = resp.data
+      const {id, name, species, image, gender,origin ,status} = resp.data
       res.status(200).json(
        { id,
         name,
         species,
         image,
         gender,
+        status,
         origin}
     )})
   .catch((error)=>res.status(500).json({error: error.message}) )

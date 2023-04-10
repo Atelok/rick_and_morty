@@ -1,23 +1,29 @@
 
 .nav_container {
-    background-color: #b2d9ec ;
-    color: #f9f7a0;
+    background-color: #419cc9b4 ;
+    color: #f9dba0;
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-around;
+    padding: 13px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    align-items: center;
 }
   
+/*AQUI ESTAN TODAS LAS ROUTAS NAVLINKS
+ABOUT - HOME - FAVORITES - LOGOUT*/
+
   .nav_links a {
-    color: #cd0b0b;
+    color: #8ac113;
     text-decoration: none;
-    margin-right: 20px;
-    font-family: "Univere67";
-    font-size: large;
+    padding-right: 20px;
+    font-family: "getschwifty";
+    font-size: 25px;
+    -webkit-text-stroke: 0.001px #ffffff54;
+    text-shadow: 1px 1px 1px #ffffff;
   }
   
   .nav_links a:last-child {
@@ -48,6 +54,16 @@
     cursor: pointer;
   }
   
-  .nav_search button[type="submit"]:hover {
+  /* .nav_search button[type="submit"]:hover {
     background-color: #eee;
+  } */
+
+
+  .is_active {
+    font-weight: bold;
+    pointer-events: none;
   }
+
+
+  /*------------------*/
+  /*------------------*/

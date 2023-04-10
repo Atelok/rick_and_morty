@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Cards from "./component/Cards/Cards";
-import Nav from "./component/Nav/Nav";
-import { Routes, Route } from "react-router-dom";
+import Navs from "./component/Nav/Nav";
+import { Routes, Route, useLocation } from "react-router-dom";
 import About from "./component/About/About";
 import Detail from "./component/Detail/Detail";
 import Form from "./component/Form/Form";
 import { useNavigate } from "react-router-dom";
+import Favorites from "./component/Favorites/Favorites";
+import { useDispatch, useSelector } from "react-redux";
+import { Logout } from "./redux/action";
+
+
 //import SearchBar from './component/SearchBar/SearchBar'
 
 //<SearchBar
@@ -13,28 +18,56 @@ import { useNavigate } from "react-router-dom";
 ///>
 
 function App() {
-  //!hooks
-  const [characters, setCharacters] = useState([]);
-  const [access, setAccess] = useState(false);
 
-  const username = "diego135tc@gmail.com";
-  const password = "Henry123";
-
-  const navigate = useNavigate();
+/*------LOGIN CON STATE GLOBAL (Pedro)--------- */
+  const access = useSelector((state)=> state.access)
+  const dispatch = useDispatch();
 
   const login = (userData) => {
     if (username === userData.username && password === userData.password) {
-      setAccess(true);
+      dispatch(Logout(true));
       navigate("/home");
     }
     return "La informacion es incorrecta";
   };
+  //-------------------------//
 
-  //useEffects es un hook
 
+  //!hooks
+  const [characters, setCharacters] = useState([]);
+  // const [access, setAccess] = useState(false); // Esto lo pasaste a una constante global
+  const {pathname}=useLocation()
+
+  const username = "";
+  const password = "";
+
+  const navigate = useNavigate();
+
+
+
+  /* recuerda que cuando usas logout se cambia el estado access
+  este useEffect verifica el estado y si se cambia hacer el array vacio */
   useEffect(() => {
-    !access && navigate("/");
-  }, [access]);
+  
+    setCharacters([])
+  
+  }, [access])  
+//------------------------------------//
+
+
+  // const login = (userData) => {
+  //   if (username === userData.username && password === userData.password) {
+  //     setAccess(true);
+  //     navigate("/home");
+  //   }
+  //   return "La informacion es incorrecta";
+  // };
+
+
+  /*useEffects es un hook*/
+  // useEffect(() => {
+  //-   !access && navigate("/");
+  // }, [access]);
 
 
 
@@ -84,14 +117,16 @@ function App() {
 
   return (
     <div className="App" style={{ padding: "25px" }}>
-      <Nav onSearch={onSearch} />
+      {pathname !== "/" && 
+      <Navs onSearch={onSearch} />
+      }; 
 
       <hr />
       <Routes>
         <Route exact path="/" element={<Form login={login} />} />
         <Route exact path="/about" element={<About />} />
-
-        <Route exact path="/detail/:detailId" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites/>} />
+        <Route path="/detail/:detailId" element={<Detail />} />
 
         <Route
           exact

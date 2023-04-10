@@ -8,6 +8,8 @@ const Cards = (props) => {
     <div className={style.contenedor}>
         {characters.map((character,index)=>{
             return (
+              <div className={style.yonatan}>
+
             <Card  
             key={index}
             name={character.name} 
@@ -15,7 +17,8 @@ const Cards = (props) => {
             gender={character.gender} 
             image={character.image} 
             id={character.id}
-            onClose={onClose}/>)
+            onClose={onClose}/>
+            </div>)
         }
         )}
     </div>

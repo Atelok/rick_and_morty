@@ -9,23 +9,41 @@ body{
   
 }
 
+.botonFav{
+  display: inline;
+  
+}
+
 /*  Este es el DIV general */
 .contCard {
-    min-width: 180px;
-    max-width: 370px;
-    min-height: 510px;
-    max-height: 510px;
+  min-width: 180px;
+  max-width: 370px;
+  min-height: 485px;
+  max-height: 470px;
   background-image: url("../../../rickmort/circuloR&M1.png");
   background-size: auto;
   background-position: 47% 30%;
   background-repeat: no-repeat;
-  border: 2px solid black;
+  border: 0.5px solid black;
   border-radius: 10px 50px 10px 50px;
   box-sizing: border-box;
   position: relative;
   height: 100%;
   
 }
+
+.contCard:hover{
+
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 4px 4px 4px rgba(149, 218, 92, 0.3);
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+}
+
+
+
 .contCard h2{
   margin: 0px;
 }
@@ -69,17 +87,17 @@ body{
   text-decoration: none;
 
   
-    /*esto es para degradado*/
+      /*esto es para degradado*/
     background: linear-gradient(to right, #a8cc38,#04b0c7 );
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-    /*---------------------*/
+        /*---------------------*/
 
-    /* para darle contorno*/
+        /* para darle contorno*/
     -webkit-text-stroke: 1px #ffffff;
-    /*------------------*/
+        /*------------------*/
 
   white-space: nowrap; /* evita que el texto se envuelva a otra línea */
   overflow: hidden; /* oculta cualquier texto que se desborde del elemento */
@@ -89,12 +107,15 @@ body{
 .link_style{
   text-decoration: none; 
   text-align: center;
+    overflow: hidden;
+  
 }
 /*----------------------------*/
 
+
 /* contenedor DIV de la Imagen */
 .conImg {
-  margin-top: 17px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,6 +153,7 @@ body{
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
   box-shadow: 2px 2px 8px rgba(149, 218, 92, 1.5);
+  
 }
 /*----------------------------------*/
 
@@ -163,3 +185,11 @@ body{
   background-position: center center;
 }
 /*----------------------------------*/
+
+
+.contCard{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}

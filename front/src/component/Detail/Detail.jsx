@@ -4,6 +4,9 @@ import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./Detail.module.css";
+import Loader from "./Loader/Loader1.jsx"
+import Boton from "./BotonRegresar/BotonRegresar";
+
 
 const Detail = () => {
   const { detailId } = useParams();
@@ -25,6 +28,7 @@ const Detail = () => {
       });
     return setCharacter({});
   }, [detailId]);
+
 
   return (
     <div className={style.contenedor}>
@@ -56,17 +60,21 @@ const Detail = () => {
             <p>{character.origin?.name}</p>
           </div>
 
-          <img src={character.image} alt={character.name} />
+          <img className={style.imagenDetalles} src={character.image} alt={character.name} />
         </div>
+
         <div className={style.recordandoaPedro}>
         <Link to="/home">
-          <button className={myButon}>
+          <Boton/>
+          {/* <button className={myButon}>
             <span className={style.texto}>Regresar</span>
-          </button>
+          </button> */}
         </Link>
         </div>
+        
       </div>)
-      :(<h3>No molestar</h3>)
+      :(<Loader/>
+        )
       }
     </div>
   );

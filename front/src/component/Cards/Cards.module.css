@@ -1,9 +1,26 @@
 
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-gap: 2%; /*opcional*/
     /* height: 500px; */
     grid-row-gap: 37px;
-    grid-column-gap: 1px
+    grid-column-gap: 1px;
+    justify-items: center;
+    /* justify-content: center; */
   }
+
+
+.contenedor{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+}
+
+.yonatan{
+  padding: 8px 0.8rem 8px 0.8rem;
+  width: 280px;
+  height: 450px;
+
+}
