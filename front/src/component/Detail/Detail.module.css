@@ -47,9 +47,9 @@
     justify-content: flex-end;
     flex-direction: column;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #a7d42a80;
     border-radius: 10%;
-    background-color: #ffa6005c;
+    background-color: #e4ddd25c;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
     -ms-border-radius: 10%;
@@ -71,7 +71,7 @@
 
     display: inline-block;
     font-family: "Univere67";
-    text-shadow: 1px 1px 1px rgba(167, 212, 42, 0.5),
+    text-shadow: 1px 1px 1px #a7d42a80,
         -1px -1px 1px rgba(167, 212, 42, 0.5);
     -webkit-text-stroke: 1px #00333d;
     color: #00b5cc;
@@ -149,12 +149,13 @@
 
 /*  EL H1 DE CUANDO ESPERAMOS EL CAMBIO EN DETAILS    */
 
-.Espera_h1{
-    color: #fff;
+/* .Espera_h1{
+    color: #a70b0bee;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     
-}
+} */
+
 .contenedor{
     display: flex;
     justify-content: center;
@@ -169,6 +170,6 @@
   /*AQUI IRA LA IMAGEN DE LOS DETALLES
   TRATAREMOS DE DARLE UN UNICO TAMAÑO*/
   .imagenDetalles{
-    width: 360px;
+    width: 368px;
     height: 360px;
   }

@@ -30,30 +30,39 @@ const Favorites = ()=>{
     },[favorites])
 
     return(
-        <>  
-        <div>
-            <label htmlFor="order"> Ordenar: </label>
-            <select name="order" onChange={handlefunc1}>
+        <div className={style.MainDIV}>  
 
-                <option value="Order" disabled="disabled">Order By</option>
-                <option value="Ascendente">Ascendente</option>
-                <option value="Descendente">Descendente</option>
+        <div className={style.divcontainer}>
 
-            </select>
+            <div className={style.selectContainer}>
 
-            <label htmlFor="filter">Filtrar: </label>
-            <select name="filter" onChange={handlefunc2}>
+            <label className={style.div_container} htmlFor="order"> Ordenar: </label>
+            <select className={style.select} name="order" onChange={handlefunc1}>
 
-                <option value="Filter" disabled>Filter By</option>
-                <option value="Todos">Todos</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Genderless">Genderless</option>
-                <option value="unknown">unknown</option>
+                <option className={style.optionFav} value="Order" disabled="disabled">Order By</option>
+                <option className={style.optionFav} value="Ascendente">Ascendente</option>
+                <option className={style.optionFav} value="Descendente">Descendente</option>
 
             </select>
+
+            </div>
+
+
+            <div className={style.selectContainer}>
+            <label className={style.div_container} htmlFor="filter">Filtrar: </label>
+            <select className={style.select} name="filter" onChange={handlefunc2}>
+
+                <option className={style.optionFav} value="Filter" disabled>Filter By</option>
+                <option className={style.optionFav} value="Todos">Todos</option>
+                <option className={style.optionFav} value="Male">Male</option>
+                <option className={style.optionFav} value="Female">Female</option>
+                <option className={style.optionFav} value="Genderless">Genderless</option>
+                <option className={style.optionFav} value="unknown">unknown</option>
+
+            </select>
+            </div>
+
         </div>
-
         <div className={style.contenedor}>
             {favorites.map((fav, index)=>{
                 return(
@@ -70,7 +79,7 @@ const Favorites = ()=>{
             })}
         </div>
 
-        </>
+        </div>
     )
     
     

@@ -1,3 +1,49 @@
+.MainDIV{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.divcontainer{
+  display: flex;
+background-color: black;
+justify-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.selectContainer{
+display: flex;
+align-items: center;
+flex-direction: row;
+
+}
+
+
+.div_container{
+  color: aliceblue;
+}
+.select{
+    
+  }
+.optionFav{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .contenedor{
     display: flex;
     justify-content: center;
@@ -8,3 +54,4 @@
     padding: 0 1rem 0 1rem ;
     width: 335px;
   }
+

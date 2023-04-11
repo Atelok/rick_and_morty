@@ -3,7 +3,7 @@ import { useState } from "react";
 import Validation from "./Validation";
 import style from "./Form.module.css"
 import Boton from "./butonIngresar";
-
+import Article from "./Article/Article";
 
 window.onload = function (){
     window.location.hash = "no-back-button";
@@ -81,6 +81,8 @@ const Form = ({login}) => {
         </form>
 
         </div>
+            <Article/>
+
           {/* AQUI ES EL RICK QUE CUELGA */}
             
             {/* <div className={style.contImg}> */}
